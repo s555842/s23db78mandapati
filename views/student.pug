@@ -2,15 +2,15 @@ extends layout
 
 block content
     h1= title
-    - let results=[{Stu_Name: "Sarins",Stu_Age:18,Mail_Id:"Sarin18@gmail.com"},{Stu_Name: "Narayana",Stu_Age:25,Mail_Id:"narayana25@gmail.com"},{Stu_Name: "harish",Stu_Age:19,Mail_Id:"harish19@gmail.com"}]
-    div.container-fliud
+    - let result=[{Stu_Name: "Satya",Stu_Age:23,Mail_Id:"satya@gmail.com"},{Stu_Name: "Narayana",Stu_Age:24,Mail_Id:"naray@gmail.com"},{Stu_Name: "Ganesh",Stu_Age:25,Mail_Id:"ganeh@gmail.com"}]
+    div.container-fluid
         div.row
-            each item,ind in results 
+            each item,ind in result
                 div(class='col-sm-2' onclick=`buy(${ind})`) 
                     p Name  is #{item.Stu_Name}
                     p Age  is #{item.Stu_Age}
                     p Mail_Id: #{item.Mail_Id}
-    each ite,index in results
+    each ite,index in result
         p value at index #{index} is : #{ite.Stu_Name},#{ite.Stu_Age},#{ite.Mail_Id}
     script. 
         function buy(i){
