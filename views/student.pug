@@ -2,16 +2,16 @@ extends layout
 
 block content
     h1= title
-    - let result=[{Stu_Name: "Satya",Stu_Age:23,Mail_Id:"satya@gmail.com"},{Stu_Name: "Narayana",Stu_Age:24,Mail_Id:"naray@gmail.com"},{Stu_Name: "Ganesh",Stu_Age:25,Mail_Id:"ganeh@gmail.com"}]
+    - let result=[{Apple_name: "orange",Apple_Price:23,Apple_Weight:"orange@gmail.com"},{Apple_name: "banana",Apple_Price:24,Apple_Weight:"35"},{Apple_name: "Grape",Apple_Price:25,Apple_Weight:"21"}]
     div.container-fluid
         div.row
             each item,ind in result
                 div(class='col-sm-2' onclick=`buy(${ind})`) 
-                    p Name  is #{item.Stu_Name}
-                    p Age  is #{item.Stu_Age}
-                    p Mail_Id: #{item.Mail_Id}
+                    p Apple_Name  is #{item.Apple_name}
+                    p Apple_Price  is #{item.Apple_Price}
+                    p Apple_Weight : #{item.Apple_Weight}
     each ite,index in result
-        p value at index #{index} is : #{ite.Stu_Name},#{ite.Stu_Age},#{ite.Mail_Id}
+        p value at index #{index} is : #{ite.Apple_Name},#{ite.Apple_Price},#{ite.Apple_Weight}
     script. 
         function buy(i){
             alert("You purchased item "+(i+1))

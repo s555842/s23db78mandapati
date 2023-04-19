@@ -68,7 +68,7 @@ async function recreateDB(){
   // Delete everything
   await student.deleteMany();
   let instance1 = new
-  student({Stu_Name:"Satya", Stu_Age:23,Mail_Id:"satya@gmail.com"});
+  student({Apple_name: "orange",Apple_Price:23,Apple_Weight:"45"});
 
   instance1.save().then( () => {
     console.log('Everything went well');
@@ -77,7 +77,7 @@ async function recreateDB(){
   });
 
   let instance2 = new
-  student({Stu_Name:"Narayana", Stu_Age:24,Mail_Id:"naray@hmail.com"});
+  student({Apple_name: "banana",Apple_Price:23,Apple_Weight:"21"});
 
   instance2.save().then( () => {
     console.log('Everything went well');
@@ -86,7 +86,7 @@ async function recreateDB(){
   });
 
   let instance3 = new
-  student({Stu_Name:"Ganesh", Stu_Age:25,Mail_Id:"ganeh@yahoo.com"});
+  student({Apple_name: "grape",Apple_Price:23,Apple_Weight:"35"});
 
   instance3.save().then( () => {
     console.log('Everything went well');
