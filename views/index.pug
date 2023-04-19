@@ -5,7 +5,7 @@ block content
   p Never Ever Give Up #{title}
   button(type="button", class="btn btn-secondary" onclick="doReduce()") press me
   div(id="reduce") Reduce the value
-  a(href='http://localhost:3000/student') Link
+  a(href='http://localhost:3000/Student') Link
   script.
     let count=20;
     let change =-1;
@@ -15,8 +15,3 @@ block content
       change=change-1;
       document.getElementById('reduce').innerHTML=`Count ${count} with Change ${change}`
     }
-    
-  
-  
- 
-  

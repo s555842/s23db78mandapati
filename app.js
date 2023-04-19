@@ -6,11 +6,11 @@ var logger = require('morgan');
 //Get the default connection
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var studentRouter = require('./routes/student');
+var StudentRouter = require('./routes/Student');
 var boardRouter = require('./routes/board');
 var resourceRouter = require('./routes/resource');
 var selectorRouter = require('./routes/selector');
-var student = require("./models/student");
+var Student = require("./models/Student");
   
 var app = express();
 
@@ -42,7 +42,7 @@ console.log("Connection to DB succeeded")});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/student', studentRouter);
+app.use('/Student', StudentRouter);
 app.use('/Board', boardRouter);
 app.use('/Selector', selectorRouter);
 app.use('/resource', resourceRouter);
@@ -66,9 +66,9 @@ app.use(function(err, req, res, next) {
 // We can seed the collection if needed on
 async function recreateDB(){
   // Delete everything
-  await student.deleteMany();
+  await Student.deleteMany();
   let instance1 = new
-  student({Apple_name: "orange",Apple_Price:23,Apple_Weight:"45"});
+  Student({Stu_Name:"Sailaxmi", Stu_Age:22,Mail_Id:"laxmi@gmail.com"});
 
   instance1.save().then( () => {
     console.log('Everything went well');
@@ -77,7 +77,7 @@ async function recreateDB(){
   });
 
   let instance2 = new
-  student({Apple_name: "banana",Apple_Price:23,Apple_Weight:"21"});
+  Student({Stu_Name:"Rakshitha", Stu_Age:22,Mail_Id:"raksg@hmail.com"});
 
   instance2.save().then( () => {
     console.log('Everything went well');
@@ -86,7 +86,7 @@ async function recreateDB(){
   });
 
   let instance3 = new
-  student({Apple_name: "grape",Apple_Price:23,Apple_Weight:"35"});
+  Student({Stu_Name:"Shivani", Stu_Age:22,Mail_Id:"shivk@yahoo.com"});
 
   instance3.save().then( () => {
     console.log('Everything went well');
@@ -96,5 +96,7 @@ async function recreateDB(){
   }
   let reseed = true;
   if (reseed) { recreateDB();}
+
+
 
 module.exports = app;

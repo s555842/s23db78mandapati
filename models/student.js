@@ -1,7 +1,7 @@
 const mongoose = require("mongoose")
 const studentSchema = mongoose.Schema({
-    Apple_Name: String,
-    Apple_Price: Number,
-    Apple_Weight: String
+    Stu_Name: String,
+    Stu_Age: Number,
+    Mail_Id: String
 })
-module.exports = mongoose.model("student",studentSchema)
+module.exports = mongoose.model("Student",studentSchema)
