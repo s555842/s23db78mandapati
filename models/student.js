@@ -4,4 +4,4 @@ const studentSchema = mongoose.Schema({
     Stu_Age: Number,
     Mail_Id: String
 })
-module.exports = mongoose.model("Student",studentSchema)
+module.exports = mongoose.model("student",studentSchema)
