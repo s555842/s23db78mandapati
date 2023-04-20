@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const Student_controlers= require('../controllers/Student');
+const Student_controlers= require('../controllers/student');
 /* GET home page. */
 router.get('/', Student_controlers.Student_view_all_Page);
 router.get('/detail', Student_controlers.Student_view_one_Page);
