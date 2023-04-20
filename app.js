@@ -10,7 +10,7 @@ var StudentRouter = require('./routes/student');
 var boardRouter = require('./routes/board');
 var resourceRouter = require('./routes/resource');
 var selectorRouter = require('./routes/selector');
-var Student = require("./models/Student");
+var Student = require("./models/student");
   
 var app = express();
 
