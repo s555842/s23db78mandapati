@@ -6,7 +6,7 @@ var logger = require('morgan');
 //Get the default connection
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
-var StudentRouter = require('./routes/Student');
+var StudentRouter = require('./routes/student');
 var boardRouter = require('./routes/board');
 var resourceRouter = require('./routes/resource');
 var selectorRouter = require('./routes/selector');
@@ -42,7 +42,7 @@ console.log("Connection to DB succeeded")});
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/Student', StudentRouter);
+app.use('/student', StudentRouter);
 app.use('/Board', boardRouter);
 app.use('/Selector', selectorRouter);
 app.use('/resource', resourceRouter);
