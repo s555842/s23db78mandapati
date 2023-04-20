@@ -1,4 +1,4 @@
-var Student = require('../models/Student');
+var Student = require('../models/student');
 // List of all Students
 
 exports.Student_list = async function (req, res) {
