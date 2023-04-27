@@ -1,22 +1,3 @@
-//- extends layout
-
-//- block content
-  // h1= title
-  //- let items = results;
-  //div(class="container-fluid")
-    div(class="row")
-      each item,index in items
-        - let destination = `dispatch(\"/Student/update?id=${item._id}\")`
-        div(class="col-sm-2" class="m-1")
-          h3 #{item.Stu_Name}
-          p #{item.Stu_Age}
-          p #{item.Mail_Id}
-          button.btn( class="btn-primary ml-1", onclick= destination) Update
-  script.
-    function dispatch(path){
-      console.log(path);
-      window.location.href=path;
-    }
 extends layout
 
 block content
@@ -43,7 +24,7 @@ block content
 
     }
     body{
-        background-image: url('student.jpg');
+        background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fcommunitycollegesusa.com%2Fen%2Fschools%2Fp%2Fmo012%2Fnorthwest-missouri-state-university&psig=AOvVaw0sp8OVoYXMF1DC6cDQjY1M&ust=1682456545759000&source=images&cd=vfe&ved=0CBAQjRxqFwoTCJiTwpi1w_4CFQAAAAAdAAAAABAE);
       //-  background:black;
        background-size:cover;
 
@@ -65,7 +46,7 @@ block content
     }
     h1{
       color:white;
-      text-shadow:1px 1px 12px black;
+      text-shadow:1px 1px 12px lightgrey;
     }
     #buttons{
       border-radius:10px;
@@ -96,6 +77,3 @@ block content
     function load(){
       console.log("cared")
     }
-    //- function buy(index){
-    //-   alert("You purchased item "+index)
-    //- }
