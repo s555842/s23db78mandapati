@@ -40,9 +40,9 @@ router.get('/login', function(req, res) {
   res.render('login', { title: 'Student App Login', user : req.user });
   });
   router.post('/login', passport.authenticate('local'), function(req, res) {
-  if(req.session.toReturn){
-  console.log("Send it back to " + req.session.toReturn)
-  res.redirect(req.session.toReturn);
+  if(req.session.returnTo){
+  console.log("Send it back to " + req.session.returnTo)
+  res.redirect(req.session.returnTo);
   }
   res.redirect('/');
 });

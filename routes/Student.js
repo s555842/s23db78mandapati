@@ -10,10 +10,10 @@ const secured = (req, res, next) => {
     console.log(req.session.returnTo);
     res.redirect("/login");
 }
-router.get('/', Student_controlers.Student_view_all_Page);
-router.get('/detail', Student_controlers.Student_view_one_Page);
+router.get('/',secured, Student_controlers.Student_view_all_Page);
+router.get('/detail',secured, Student_controlers.Student_view_one_Page);
 /* GET create Student page */
-router.get('/create', Student_controlers.Student_create_Page);
-router.get('/update', Student_controlers.Student_update_Page);
-router.get('/delete', Student_controlers.Student_delete_Page);
+router.get('/create',secured, Student_controlers.Student_create_Page);
+router.get('/update',secured, Student_controlers.Student_update_Page);
+router.get('/delete',secured, Student_controlers.Student_delete_Page);
 module.exports = router;
